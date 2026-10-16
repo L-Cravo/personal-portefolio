@@ -6,16 +6,20 @@ Site estático (HTML/CSS/JS puro, sem dependências) para a candidatura à **Bol
 
 ## Estrutura
 
-O site segue a **matriz de avaliação oficial** (Guia de Apoio à Candidatura 2026/2027):
+O site é uma aplicação de página única com **tabs no topo** — cada tipo de mérito é uma vista própria, navegável por hash:
 
-| # | Categoria | Secção |
-|---|-----------|--------|
-| 01 | Mérito Académico | `#academico` |
-| 02 | Mérito Social | `#social` |
-| 03 | Mérito Desportivo | `#desportivo` |
-| 04 | Mérito Científico · Tecnológico | `#cientifico` |
-| 05 | Mérito Artístico | `#artistico` |
-| 06 | Outros Méritos (carta de motivação, portefólio) | `#outros` |
+| Rota | Vista |
+|------|-------|
+| `#/` | Início — hero, sobre mim, índice de méritos, enquadramento oficial |
+| `#/academico` | 01 · Mérito Académico |
+| `#/social` | 02 · Mérito Social |
+| `#/desportivo` | 03 · Mérito Desportivo |
+| `#/cientifico` | 04 · Mérito Científico · Tecnológico |
+| `#/artistico` | 05 · Mérito Artístico |
+| `#/outros` | 06 · Outros Méritos (carta de motivação, portefólio) |
+| `#/contacto` | Contacto |
+
+As vistas seguem a **matriz de avaliação oficial** (Guia de Apoio à Candidatura 2026/2027).
 
 Dentro de cada categoria há **experiências/eventos** (blocos `.entry`), cada um com:
 

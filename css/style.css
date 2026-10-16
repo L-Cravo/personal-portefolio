@@ -90,13 +90,30 @@ a { color: inherit; }
   font-weight: 500;
   transition: color 0.15s ease;
 }
+.nav-links a { position: relative; }
 .nav-links a:hover, .nav-links a.active { color: var(--ink); }
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -6px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
 .nav-cta {
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 8px 18px;
 }
 .nav-cta:hover { border-color: var(--ink); }
+.nav-links a.nav-cta.active::after { display: none; }
+.nav-links a.nav-cta.active { border-color: var(--ink); color: var(--ink); }
+
+/* ---------- Vistas (tabs) ---------- */
+/* Sem JS, todas as vistas ficam visíveis (degradação graciosa). */
+.view.view-hidden { display: none; }
+.view-page { padding: 150px 0 110px; }
+.view-page-center { display: flex; align-items: center; min-height: 70vh; }
 
 .nav-toggle {
   display: none;

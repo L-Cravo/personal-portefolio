@@ -17,10 +17,10 @@
 </head>
 <body>
 
-  <!-- ================= NAVEGAÇÃO ================= -->
+  <!-- ================= NAVEGAÇÃO (tabs) ================= -->
   <header class="nav" id="nav">
     <div class="container nav-inner">
-      <a href="#inicio" class="brand">
+      <a href="#/" class="brand">
         <img src="assets/img/avatar.svg" alt="" class="brand-avatar">
         <span>Lourenço Cravo</span>
       </a>
@@ -28,88 +28,122 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="nav-links" id="navLinks">
-        <a href="#sobre">Sobre</a>
-        <a href="#meritos">Méritos</a>
-        <a href="#enquadramento">Enquadramento</a>
-        <a href="#contacto" class="nav-cta">Contacto</a>
+        <a href="#/" data-route="inicio">Início</a>
+        <a href="#/academico" data-route="academico">Académico</a>
+        <a href="#/social" data-route="social">Social</a>
+        <a href="#/desportivo" data-route="desportivo">Desportivo</a>
+        <a href="#/cientifico" data-route="cientifico">Ciência</a>
+        <a href="#/artistico" data-route="artistico">Arte</a>
+        <a href="#/outros" data-route="outros">Outros</a>
+        <a href="#/contacto" data-route="contacto" class="nav-cta">Contacto</a>
       </nav>
     </div>
   </header>
 
-  <!-- ================= HERO ================= -->
-  <section class="hero" id="inicio">
-    <div class="container hero-inner">
-      <p class="hero-eyebrow">Candidatura · Bolsa de Mérito — Concelho de Oeiras · 2026/2027</p>
-      <h1>Lourenço Cravo</h1>
-      <p class="hero-tag">[EDITAR] Uma frase forte que resuma quem és. Ex.: «Estudante de X em Y, com média de Z, voluntário em W e premiado em …»</p>
-      <div class="hero-actions">
-        <a href="#meritos" class="btn">Explorar méritos</a>
-        <a href="#enquadramento" class="btn btn-ghost">Enquadramento oficial</a>
-      </div>
-      <div class="hero-facts">
-        <div><strong>[EDITAR]</strong><span>Curso</span></div>
-        <div><strong>[EDITAR]</strong><span>Instituição</span></div>
-        <div><strong>[EDITAR]</strong><span>Média</span></div>
-        <div><strong>[EDITAR]</strong><span>Residência — Oeiras</span></div>
-      </div>
-    </div>
-  </section>
+  <!-- ============================================================
+       VISTA: INÍCIO (hero + sobre + índice + enquadramento)
+       ============================================================ -->
+  <div class="view" id="view-inicio" data-view="inicio">
 
-  <!-- ================= SOBRE ================= -->
-  <section class="section" id="sobre">
-    <div class="container">
-      <p class="kicker">Sobre mim</p>
-      <h2 class="section-title">Quem sou</h2>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p>[EDITAR] Apresenta-te em 2–3 parágrafos: onde estudas, o curso, o que te motiva e o que te distingue.</p>
-          <p>[EDITAR] Refere concretamente resultados (médias, percentis) e envolvimento na comunidade — são critérios avaliados na bolsa. Fala também das tuas aspirações futuras.</p>
-          <p class="about-note">Todas as evidências apresentadas neste portefólio estão documentadas na secção respetiva de cada mérito, com certificados, cartas e registo audiovisual.</p>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="hero-eyebrow">Candidatura · Bolsa de Mérito — Concelho de Oeiras · 2026/2027</p>
+        <h1>Lourenço Cravo</h1>
+        <p class="hero-tag">[EDITAR] Uma frase forte que resuma quem és. Ex.: «Estudante de X em Y, com média de Z, voluntário em W e premiado em …»</p>
+        <div class="hero-actions">
+          <a href="#/academico" class="btn">Explorar méritos</a>
+          <a href="#/enquadramento" class="btn btn-ghost">Enquadramento oficial</a>
         </div>
-        <ul class="about-facts reveal">
-          <li><strong>Curso</strong><span>[EDITAR] Licenciatura em…</span></li>
-          <li><strong>Instituição</strong><span>[EDITAR] Universidade / Escola</span></li>
-          <li><strong>Média de acesso</strong><span>[EDITAR] 18,2 / 20</span></li>
-          <li><strong>Média atual</strong><span>[EDITAR] 17,5 / 20</span></li>
-          <li><strong>Ensino secundário</strong><span>[EDITAR] Escola · média</span></li>
-        </ul>
+        <div class="hero-facts">
+          <div><strong>[EDITAR]</strong><span>Curso</span></div>
+          <div><strong>[EDITAR]</strong><span>Instituição</span></div>
+          <div><strong>[EDITAR]</strong><span>Média</span></div>
+          <div><strong>[EDITAR]</strong><span>Residência — Oeiras</span></div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ================= ÍNDICE DE MÉRITOS ================= -->
-  <section class="section section-alt" id="meritos">
-    <div class="container">
-      <p class="kicker">Matriz de avaliação</p>
-      <h2 class="section-title">Méritos</h2>
-      <p class="section-lead">Organizado segundo a matriz oficial de avaliação da Bolsa de Mérito do Concelho de Oeiras (Guia de Apoio à Candidatura 2026/2027). Cada categoria apresenta experiências concretas com as respetivas evidências.</p>
-      <nav class="merit-index reveal">
-        <a href="#academico"><span>01</span> Académico</a>
-        <a href="#social"><span>02</span> Social</a>
-        <a href="#desportivo"><span>03</span> Desportivo</a>
-        <a href="#cientifico"><span>04</span> Científico · Tecnológico</a>
-        <a href="#artistico"><span>05</span> Artístico</a>
-        <a href="#outros"><span>06</span> Outros</a>
-      </nav>
-    </div>
-  </section>
+    <!-- SOBRE -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <p class="kicker">Sobre mim</p>
+        <h2 class="section-title">Quem sou</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>[EDITAR] Apresenta-te em 2–3 parágrafos: onde estudas, o curso, o que te motiva e o que te distingue.</p>
+            <p>[EDITAR] Refere concretamente resultados (médias, percentis) e envolvimento na comunidade — são critérios avaliados na bolsa. Fala também das tuas aspirações futuras.</p>
+            <p class="about-note">Todas as evidências estão organizadas por tipo de mérito, nas secções correspondentes do menu.</p>
+          </div>
+          <ul class="about-facts reveal">
+            <li><strong>Curso</strong><span>[EDITAR] Licenciatura em…</span></li>
+            <li><strong>Instituição</strong><span>[EDITAR] Universidade / Escola</span></li>
+            <li><strong>Média de acesso</strong><span>[EDITAR] 18,2 / 20</span></li>
+            <li><strong>Média atual</strong><span>[EDITAR] 17,5 / 20</span></li>
+            <li><strong>Ensino secundário</strong><span>[EDITAR] Escola · média</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÍNDICE DE MÉRITOS -->
+    <section class="section section-alt">
+      <div class="container">
+        <p class="kicker">Matriz de avaliação</p>
+        <h2 class="section-title">Méritos</h2>
+        <p class="section-lead">Organizado segundo a matriz oficial de avaliação da Bolsa de Mérito do Concelho de Oeiras (Guia de Apoio à Candidatura 2026/2027). Cada categoria apresenta experiências concretas com as respetivas evidências.</p>
+        <nav class="merit-index reveal">
+          <a href="#/academico"><span>01</span> Académico</a>
+          <a href="#/social"><span>02</span> Social</a>
+          <a href="#/desportivo"><span>03</span> Desportivo</a>
+          <a href="#/cientifico"><span>04</span> Científico · Tecnológico</a>
+          <a href="#/artistico"><span>05</span> Artístico</a>
+          <a href="#/outros"><span>06</span> Outros</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ENQUADRAMENTO OFICIAL -->
+    <section class="section" id="enquadramento">
+      <div class="container">
+        <p class="kicker">Enquadramento oficial</p>
+        <h2 class="section-title">Documentos de referência</h2>
+        <p class="section-lead">Esta candidatura segue o Regulamento Municipal n.º 1039/2023 (DR, 27-09-2023) e o Edital n.º 351/2026: candidaturas de 2 de dezembro de 2026 a 4 de janeiro de 2027 · valor de 5.000 € numa única prestação · até 10 bolsas.</p>
+        <div class="official-docs">
+          <a class="official-doc reveal" href="assets/docs/edital-351-2026-bolsas-oeiras.pdf" target="_blank" rel="noopener">
+            <span class="official-doc-type">Edital</span>
+            <h3>Edital n.º 351/2026</h3>
+            <p>Abertura do procedimento de candidaturas — ano letivo 2026/2027</p>
+            <span class="official-doc-link">Abrir PDF →</span>
+          </a>
+          <a class="official-doc reveal" href="assets/docs/guia-candidatura-bolsas-merito-2026-2027.pdf" target="_blank" rel="noopener">
+            <span class="official-doc-type">Guia</span>
+            <h3>Guia de Apoio à Candidatura</h3>
+            <p>Bolsas de Mérito 2026/2027 — matriz de avaliação e parâmetros</p>
+            <span class="official-doc-link">Abrir PDF →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <!-- ============================================================
-       MÉRITO ACADÉMICO
+       VISTA: MÉRITO ACADÉMICO
        Cada "experiência" é um bloco .entry. Para adicionar outra,
        duplica o bloco <article> e edita o conteúdo (ver README).
        ============================================================ -->
-  <section class="section merit-section" id="academico">
+  <div class="view view-page" id="view-academico" data-view="academico">
     <div class="container">
       <header class="merit-head">
         <span class="merit-num" aria-hidden="true">01</span>
         <div>
-          <h2 class="section-title">Mérito Académico</h2>
+          <p class="kicker">Mérito</p>
+          <h2 class="section-title">Académico</h2>
           <p class="merit-criteria">Percurso estudantil passível de reconhecimento público — médias, formação complementar e reconhecimento por terceiros.</p>
         </div>
       </header>
 
-      <!-- ===== Experiência (exemplo completo) ===== -->
+      <!-- ===== Experiência ===== -->
       <article class="entry reveal">
         <div class="entry-meta">
           <span class="entry-year">[EDITAR] 2025</span>
@@ -164,21 +198,20 @@
         </div>
       </article>
 
-      <!-- Para adicionar mais experiências, duplica um bloco <article class="entry"> acima.
-      <article class="entry reveal"> … </article>
-      -->
+      <!-- Para adicionar mais experiências, duplica um bloco <article class="entry"> acima. -->
     </div>
-  </section>
+  </div>
 
   <!-- ============================================================
-       MÉRITO SOCIAL
+       VISTA: MÉRITO SOCIAL
        ============================================================ -->
-  <section class="section merit-section section-alt" id="social">
+  <div class="view view-page" id="view-social" data-view="social">
     <div class="container">
       <header class="merit-head">
         <span class="merit-num" aria-hidden="true">02</span>
         <div>
-          <h2 class="section-title">Mérito Social</h2>
+          <p class="kicker">Mérito</p>
+          <h2 class="section-title">Social</h2>
           <p class="merit-criteria">Ações em prol da comunidade, responsabilidade social e cidadania ativa.</p>
         </div>
       </header>
@@ -225,17 +258,18 @@
         </div>
       </article>
     </div>
-  </section>
+  </div>
 
   <!-- ============================================================
-       MÉRITO DESPORTIVO
+       VISTA: MÉRITO DESPORTIVO
        ============================================================ -->
-  <section class="section merit-section" id="desportivo">
+  <div class="view view-page" id="view-desportivo" data-view="desportivo">
     <div class="container">
       <header class="merit-head">
         <span class="merit-num" aria-hidden="true">03</span>
         <div>
-          <h2 class="section-title">Mérito Desportivo</h2>
+          <p class="kicker">Mérito</p>
+          <h2 class="section-title">Desportivo</h2>
           <p class="merit-criteria">Prática desportiva, desempenho competitivo e reconhecimento.</p>
         </div>
       </header>
@@ -265,17 +299,18 @@
         </div>
       </article>
     </div>
-  </section>
+  </div>
 
   <!-- ============================================================
-       MÉRITO CIENTÍFICO OU TECNOLÓGICO
+       VISTA: MÉRITO CIENTÍFICO OU TECNOLÓGICO
        ============================================================ -->
-  <section class="section merit-section section-alt" id="cientifico">
+  <div class="view view-page" id="view-cientifico" data-view="cientifico">
     <div class="container">
       <header class="merit-head">
         <span class="merit-num" aria-hidden="true">04</span>
         <div>
-          <h2 class="section-title">Mérito Científico · Tecnológico</h2>
+          <p class="kicker">Mérito</p>
+          <h2 class="section-title">Científico · Tecnológico</h2>
           <p class="merit-criteria">Competições e eventos científicos, trabalho de investigação e reconhecimento por terceiros.</p>
         </div>
       </header>
@@ -305,17 +340,18 @@
         </div>
       </article>
     </div>
-  </section>
+  </div>
 
   <!-- ============================================================
-       MÉRITO ARTÍSTICO
+       VISTA: MÉRITO ARTÍSTICO
        ============================================================ -->
-  <section class="section merit-section" id="artistico">
+  <div class="view view-page" id="view-artistico" data-view="artistico">
     <div class="container">
       <header class="merit-head">
         <span class="merit-num" aria-hidden="true">05</span>
         <div>
-          <h2 class="section-title">Mérito Artístico</h2>
+          <p class="kicker">Mérito</p>
+          <h2 class="section-title">Artístico</h2>
           <p class="merit-criteria">Desenvolvimento e demonstração de aptidão artística, sob qualquer forma de arte.</p>
         </div>
       </header>
@@ -349,17 +385,18 @@
         </div>
       </article>
     </div>
-  </section>
+  </div>
 
   <!-- ============================================================
-       OUTROS MÉRITOS + CARTA DE MOTIVAÇÃO
+       VISTA: OUTROS MÉRITOS + CARTA DE MOTIVAÇÃO
        ============================================================ -->
-  <section class="section merit-section section-alt" id="outros">
+  <div class="view view-page" id="view-outros" data-view="outros">
     <div class="container">
       <header class="merit-head">
         <span class="merit-num" aria-hidden="true">06</span>
         <div>
-          <h2 class="section-title">Outros Méritos</h2>
+          <p class="kicker">Mérito</p>
+          <h2 class="section-title">Outros</h2>
           <p class="merit-criteria">Carta de motivação, qualidade da apresentação da candidatura e outros méritos relevantes.</p>
         </div>
       </header>
@@ -372,7 +409,7 @@
         <div class="entry-body">
           <h3>[EDITAR] Carta de motivação — dirigida ao Presidente da Câmara</h3>
           <p class="entry-sub">Perfil · percurso de vida · motivações · aspirações futuras</p>
-          <p class="entry-desc">[EDITAR] Resumo da carta: como serás investir o valor da bolsa e o que aspiras para o futuro. A versão integral, datada e assinada, acompanha a candidatura.</p>
+          <p class="entry-desc">[EDITAR] Resumo da carta: como irás investir o valor da bolsa e o que aspiras para o futuro. A versão integral, datada e assinada, acompanha a candidatura.</p>
           <div class="entry-media">
             <div class="media-docs">
               <a class="doc-chip" href="#" target="_blank" rel="noopener">[EDITAR] Carta de motivação (PDF)</a>
@@ -398,33 +435,12 @@
         </div>
       </article>
     </div>
-  </section>
+  </div>
 
-  <!-- ================= ENQUADRAMENTO OFICIAL ================= -->
-  <section class="section" id="enquadramento">
-    <div class="container">
-      <p class="kicker">Enquadramento oficial</p>
-      <h2 class="section-title">Documentos de referência</h2>
-      <p class="section-lead">Esta candidatura segue o Regulamento Municipal n.º 1039/2023 (DR, 27-09-2023) e o Edital n.º 351/2026: candidaturas de 2 de dezembro de 2026 a 4 de janeiro de 2027 · valor de 5.000 € numa única prestação · até 10 bolsas.</p>
-      <div class="official-docs">
-        <a class="official-doc reveal" href="assets/docs/edital-351-2026-bolsas-oeiras.pdf" target="_blank" rel="noopener">
-          <span class="official-doc-type">Edital</span>
-          <h3>Edital n.º 351/2026</h3>
-          <p>Abertura do procedimento de candidaturas — ano letivo 2026/2027</p>
-          <span class="official-doc-link">Abrir PDF →</span>
-        </a>
-        <a class="official-doc reveal" href="assets/docs/guia-candidatura-bolsas-merito-2026-2027.pdf" target="_blank" rel="noopener">
-          <span class="official-doc-type">Guia</span>
-          <h3>Guia de Apoio à Candidatura</h3>
-          <p>Bolsas de Mérito 2026/2027 — matriz de avaliação e parâmetros</p>
-          <span class="official-doc-link">Abrir PDF →</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= CONTACTO ================= -->
-  <section class="section section-alt" id="contacto">
+  <!-- ============================================================
+       VISTA: CONTACTO
+       ============================================================ -->
+  <div class="view view-page view-page-center" id="view-contacto" data-view="contacto">
     <div class="container contacto-inner">
       <p class="kicker">Contacto</p>
       <h2 class="section-title">Falemos</h2>
@@ -435,7 +451,7 @@
         <a class="btn btn-ghost" href="https://github.com/L-Cravo" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
-  </section>
+  </div>
 
   <footer class="footer">
     <div class="container">
