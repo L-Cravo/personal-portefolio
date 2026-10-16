@@ -213,6 +213,53 @@ a { color: inherit; }
 }
 .merit-criteria { color: var(--muted); font-size: 0.98rem; max-width: 56ch; }
 
+/* ---------- Subcategorias (ex.: Ensino Básico / Secundário / Superior) ---------- */
+.subcat {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin: 64px 0 24px;
+}
+.merit-head + .subcat { margin-top: 0; }
+.subcat h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+}
+.subcat::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+  align-self: center;
+}
+.subcat-note { color: var(--muted); font-size: 0.9rem; margin: -14px 0 24px; max-width: 62ch; }
+
+/* ---------- Placeholder de vídeo (à espera do YouTube) ---------- */
+.media-video-ph {
+  aspect-ratio: 16 / 9;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 10px;
+  text-align: center;
+  background: repeating-linear-gradient(45deg, #f0ede6, #f0ede6 12px, #e9e5da 12px, #e9e5da 24px);
+  border: 2px dashed #cdc7b8;
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 16px;
+}
+.media-video-ph-icon {
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--ink);
+  color: #fff;
+  font-size: 1.1rem;
+}
+
 /* ---------- Quadro de anúncios ---------- */
 .board-wrap {
   background:
