@@ -2,67 +2,6 @@
 (function () {
   "use strict";
 
-  /* ============================================================
-     Router por hash — cada tipo de mérito é uma "tab" (vista).
-     Rotas: #/ (início), #/academico, #/social, #/desportivo,
-     #/cientifico, #/artistico, #/outros, #/contacto.
-     Secções dentro de uma vista: #/enquadramento, #/sobre.
-     Sem JS, todas as vistas ficam visíveis (degradação graciosa).
-     ============================================================ */
-
-  var VIEWS = ["inicio", "academico", "social", "desportivo", "cientifico", "artistico", "outros", "contacto"];
-  var TITLES = {
-    inicio: "Lourenço Cravo — Portefólio de Mérito",
-    academico: "Mérito Académico — Lourenço Cravo",
-    social: "Mérito Social — Lourenço Cravo",
-    desportivo: "Mérito Desportivo — Lourenço Cravo",
-    cientifico: "Mérito Científico · Tecnológico — Lourenço Cravo",
-    artistico: "Mérito Artístico — Lourenço Cravo",
-    outros: "Outros Méritos — Lourenço Cravo",
-    contacto: "Contacto — Lourenço Cravo"
-  };
-
-  var views = Array.prototype.slice.call(document.querySelectorAll(".view"));
-  var tabs = Array.prototype.slice.call(document.querySelectorAll("[data-route]"));
-
-  function parseHash() {
-    var h = location.hash.replace(/^#\/?/, "").replace(/\/+$/, "");
-    return h;
-  }
-
-  function show(route) {
-    var viewId = VIEWS.indexOf(route) !== -1 ? route : "inicio";
-    var scrollToId = viewId === "inicio" && route !== "inicio" ? route : null;
-
-    views.forEach(function (v) {
-      var active = v.getAttribute("data-view") === viewId;
-      v.classList.toggle("view-hidden", !active);
-    });
-
-    tabs.forEach(function (a) {
-      var active = a.getAttribute("data-route") === viewId;
-      a.classList.toggle("active", active);
-      if (active) a.setAttribute("aria-current", "page");
-      else a.removeAttribute("aria-current");
-    });
-
-    document.title = TITLES[viewId] || TITLES.inicio;
-
-    if (scrollToId) {
-      var el = document.getElementById(scrollToId);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-        return;
-      }
-    }
-    window.scrollTo(0, 0);
-  }
-
-  function applyRoute() { show(parseHash()); }
-
-  window.addEventListener("hashchange", applyRoute);
-  applyRoute();
-
   /* ---------- Nav: sombra ao fazer scroll ---------- */
   var nav = document.getElementById("nav");
   function onScroll() {

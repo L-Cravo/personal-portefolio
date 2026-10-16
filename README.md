@@ -6,20 +6,23 @@ Site estático (HTML/CSS/JS puro, sem dependências) para a candidatura à **Bol
 
 ## Estrutura
 
-O site é uma aplicação de página única com **tabs no topo** — cada tipo de mérito é uma vista própria, navegável por hash:
+Site **multi-página** — cada tipo de mérito tem uma subpágina própria (URL partilhável), seguindo a **matriz de avaliação oficial** (Guia de Apoio à Candidatura 2026/2027):
 
-| Rota | Vista |
-|------|-------|
-| `#/` | Início — hero, sobre mim, índice de méritos, enquadramento oficial |
-| `#/academico` | 01 · Mérito Académico |
-| `#/social` | 02 · Mérito Social |
-| `#/desportivo` | 03 · Mérito Desportivo |
-| `#/cientifico` | 04 · Mérito Científico · Tecnológico |
-| `#/artistico` | 05 · Mérito Artístico |
-| `#/outros` | 06 · Outros Méritos (carta de motivação, portefólio) |
-| `#/contacto` | Contacto |
+| Página | Conteúdo |
+|--------|----------|
+| `index.html` | Capa — hero, sobre mim e cartões para os 6 méritos + contacto |
+| `academico.html` | 01 · Mérito Académico |
+| `social.html` | 02 · Mérito Social |
+| `desportivo.html` | 03 · Mérito Desportivo |
+| `cientifico.html` | 04 · Mérito Científico · Tecnológico |
+| `artistico.html` | 05 · Mérito Artístico |
+| `outros.html` | 06 · Outros Méritos (carta de motivação, portefólio) |
 
-As vistas seguem a **matriz de avaliação oficial** (Guia de Apoio à Candidatura 2026/2027).
+Nas subpáginas, as experiências/eventos são apresentados num **quadro de anúncios**: cartões "afixados" (com alfinete e leve rotação), em grelha tipo mosaico. Cada cartão suporta:
+
+- ano + etiqueta (ex.: «Voluntariado», «Competição»)
+- título, sub-título (entidade/função) e descrição
+- **média anexa**: vídeo (iframe YouTube), áudio (iframe SoundCloud/Spotify ou ficheiro local), fotos (com lightbox) e documentos (PDF)
 
 Dentro de cada categoria há **experiências/eventos** (blocos `.entry`), cada um com:
 
