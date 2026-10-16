@@ -382,8 +382,7 @@ a { color: inherit; }
 }
 .photo-thumb:hover img { transform: scale(1.05); }
 
-.media-docs { display: flex; flex-wrap: wrap; gap: 10px; }
-.doc-chip {
+.media-docs { display: flex; flex-wrap: wrap; gap: 10px; }.doc-chip {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -399,6 +398,16 @@ a { color: inherit; }
 }
 .doc-chip::before { content: "↗"; color: var(--accent); font-size: 0.85em; }
 .doc-chip:hover { border-color: var(--accent); background: #fdfaf2; }
+
+/* ---------- Incorporações (iframes de sites/vídeos externos) ---------- */
+.media-embed {
+  width: 100%;
+  height: 320px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  display: block;
+}
 
 /* ---------- Navegação entre méritos (pager) ---------- */
 .pager {
