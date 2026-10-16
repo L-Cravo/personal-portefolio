@@ -2,7 +2,7 @@
 
 Site estático (HTML/CSS/JS puro, sem dependências) para a candidatura à **Bolsa de Mérito do Concelho de Oeiras** — ano letivo 2026/2027, ao abrigo do Regulamento n.º 1039/2023 e do Edital n.º 351/2026.
 
-**Domínio:** www.lourencocravo.com (GitHub Pages, via ficheiro `CNAME`)
+**URL:** https://l-cravo.github.io/personal-portefolio/ (GitHub Pages, branch `main`)
 
 ## Estrutura
 
@@ -47,7 +47,7 @@ git commit -m "Atualiza conteúdo do portefólio"
 git push origin main
 ```
 
-O GitHub Pages serve o site em www.lourencocravo.com (configurado pelo ficheiro `CNAME`). Verifica em **Settings → Pages** do repositório que a branch `main` está ativa.
+O GitHub Pages serve o site em https://l-cravo.github.io/personal-portefolio/. Verifica em **Settings → Pages** do repositório que a branch `main` está ativa.
 
 ## Testar localmente
 
