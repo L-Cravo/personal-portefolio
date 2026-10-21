@@ -2,6 +2,25 @@
 (function () {
   "use strict";
 
+  /* ---------- Tema claro/escuro ---------- */
+  var root = document.documentElement;
+  var themeBtn = document.getElementById("themeToggle");
+  function setTheme(t) {
+    root.setAttribute("data-theme", t);
+    if (themeBtn) themeBtn.textContent = t === "dark" ? "☀️" : "🌙";
+  }
+  var savedTheme = null;
+  try { savedTheme = localStorage.getItem("theme"); } catch (e) {}
+  var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  setTheme(savedTheme || (prefersDark ? "dark" : "light"));
+  if (themeBtn) {
+    themeBtn.addEventListener("click", function () {
+      var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      setTheme(next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+    });
+  }
+
   /* ---------- Nav: sombra ao fazer scroll ---------- */
   var nav = document.getElementById("nav");
   function onScroll() {
