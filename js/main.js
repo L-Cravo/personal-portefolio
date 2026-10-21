@@ -7,7 +7,6 @@
   var themeBtn = document.getElementById("themeToggle");
   function setTheme(t) {
     root.setAttribute("data-theme", t);
-    if (themeBtn) themeBtn.textContent = t === "dark" ? "☀️" : "🌙";
   }
   var savedTheme = null;
   try { savedTheme = localStorage.getItem("theme"); } catch (e) {}
