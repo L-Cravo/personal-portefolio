@@ -284,10 +284,10 @@ body { transition: background-color 0.25s ease, color 0.25s ease; }
   font-size: 1.1rem;
 }
 
-/* Vídeo vertical (YouTube Shorts) */
+/* Vídeo vertical (Vimeo — proporção real 3:4) */
 .media-video-vertical {
-  aspect-ratio: 9 / 16;
-  max-width: 360px;
+  aspect-ratio: 100 / 132.78;
+  max-width: 380px;
   margin: 0 auto;
 }
 
