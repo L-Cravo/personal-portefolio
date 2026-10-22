@@ -284,6 +284,13 @@ body { transition: background-color 0.25s ease, color 0.25s ease; }
   font-size: 1.1rem;
 }
 
+/* Vídeo vertical (YouTube Shorts) */
+.media-video-vertical {
+  aspect-ratio: 9 / 16;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
 /* ---------- Quadro de anúncios ---------- */
 .board-wrap {
   background:
